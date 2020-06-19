@@ -1,9 +1,15 @@
-const getNotes = require('./notes.js')
+const validator = require('validator')
+
+const chalk = require('chalk');
+
+const command = process.argv[2];
 
 
-console.log(getNotes())
-// const add = require('./utils.js');
+if(command === 'add'){
+    console.log('Adding a note!')
+}
+else if(command === 'remove'){
+   console.log('Removing note!')
+}
 
-// const sum = add(1,2)
-// console.log(sum);
 
