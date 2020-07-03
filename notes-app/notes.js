@@ -45,7 +45,7 @@ const removeNote = function (title) {
       console.log(chalk.green.inverse('note removed!'))
       saveNotes(notesToKeep)
    } else {
-      consol.log(chalk.red.inverse('no note found'))
+      console.log(chalk.red.inverse('no note found'))
    }
 }
 
