@@ -46,6 +46,7 @@ yargs.command({
 yargs.command({
     command: 'read',
     describe: 'read a note',
+    builder: 
     handler: function(){
         console.log('read a note')
     }
