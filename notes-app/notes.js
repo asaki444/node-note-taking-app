@@ -14,8 +14,7 @@ const addNote = function (title, body) {
       })
       saveNotes(notes)
       console.log(chack.green.inverse('New note added!'))
-   }
-   else{
+   } else {
       console.log(chalk.red.inverse('Note title taken!'))
    }
 
@@ -50,25 +49,24 @@ const removeNote = function (title) {
    }
 }
 
-const listNotes = ()=>{
+const listNotes = () => {
    const notes = loadNotes();
    console.log(chalk.inverse('Your notes'))
-   notes.forEach((note)=>{
+   notes.forEach((note) => {
       console.log(note.title)
    })
 }
 
 const readNote = (title) => {
- const notes = loadNotes();
- const note = notes.find(note => note.title === title)
+   const notes = loadNotes();
+   const note = notes.find(note => note.title === title)
 
- if(note){
-    console.log(chalk.inverse(note.title))
-    console.log(note.body)
- }
- else{
-   console.log(chalk.red.inverse('Note not found'))
- }
+   if (note) {
+      console.log(chalk.inverse(note.title))
+      console.log(note.body)
+   } else {
+      console.log(chalk.red.inverse('Note not found'))
+   }
 }
 
 module.exports = {
